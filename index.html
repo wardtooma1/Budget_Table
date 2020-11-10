@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@900&family=Noto+Sans:wght@400;700&display=swap"
+        rel="stylesheet">
+    <script async src="main.js"></script>
+</head>
+
+<body>
+
+    <div class="div">
+
+        <div class="image">
+        </div>
+
+
+        <div class="form">
+            <h1>Budget</h1>
+            <form onsubmit="addToTable(event)" action="">
+                <label for="amount" class="box">Amount: </label>
+                <input type="text" id="amount">
+
+
+                <select name="currency" id="cur">
+                    <option value="Euro">EUR</option>
+                    <option value="US Dollar">USD</option>
+                    <option value="Canadian Dollar">CAD</option>
+                    <option value="Japanese Yen">JPY</option>
+                    <option value="Kuna">Swiss Franc </option>
+                </select>
+
+                <label for="date" class="box">Date:</label>
+                <input type="date" id="date">
+
+                <p class="box">Type:</p>
+                <input type="radio" name="type" id="income">
+                <label for="income">Income</label>
+
+                <input type="radio" name="type" id="outcome">
+                <label for="outcome">Outcome</label>
+
+
+                <p class="box">For:</p>
+
+                <input type="checkbox" id="myself">
+                <label for="myself">Myself</label>
+                <input type="checkbox" id="friend">
+                <label for="friend">Friends</label>
+                <input type="checkbox" id="family">
+                <label for="family">Family</label>
+
+                <p class="box">Explanation:</p>
+                <textarea id="exp" rows="1" cols="50" placeholder="Type here..."></textarea>
+
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+    </div>
+
+    <table id="budget">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Amount</th>
+                <th>Explanation</th>
+                <th>Type</th>
+                <th>For</th>
+            </tr>
+        </thead>
+
+        <tbody id="data">
+
+        </tbody>
+
+     
+
+    </table>
+
+    
+</body>
+
+</html>
